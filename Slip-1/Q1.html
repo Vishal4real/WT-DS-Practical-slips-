@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Title>FORM</Title>
+<style>
+    h1{
+        text-align: left;
+        padding-left: 75px;
+    }
+    h1 u{
+        font-size: 6pt;
+        color: red;
+    }
+    body{
+        background-color: yellow;
+    }
+    input{
+        margin: 10px;
+        margin-left: 10px;
+    }
+    textarea{
+        display: inline-table;
+        margin-left: 10px;
+    }
+    button{
+       margin-top: 10px;
+       margin-left: 50px;
+       border-style: none;
+       padding: 6px;
+    }
+    .btn-1{
+        background-color: green;
+        color: white;
+    }
+    .btn-2{
+        background-color: rgb(76, 169, 206);
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <h1><u>Project Management</u></h1>
+    <form>
+        Project Name <input type="text" placeholder="project name"><br>
+
+        Assigned to
+        <select>
+             <option>Vishal</option>
+             <option>Tejas</option>
+             <option>rahul</option>
+             <option>sourabh</option>
+       </select><br>
+        Start Date <input type="date"><br>
+
+        End Date <input type="date"><br>
+
+        Priority <input type="radio" name="h">High
+        <input type="radio" name="h">Average
+        <input type="radio" name="h">Low<br>
+
+        Description<textarea></textarea><br>
+
+        <button class="btn-1">Submit</button>
+        <button class="btn-2">clear</button>
+    </form>
+</body>
+</html>
