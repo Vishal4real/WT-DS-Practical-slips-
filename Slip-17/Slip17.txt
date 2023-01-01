@@ -1,5 +1,47 @@
 Question:1
+<?php
 
+	$name = array("Sagar"=>"31","Vicky"=>"41","Leena"=>"39","Ramesh"=>"40");
+
+	
+
+	asort($name);
+
+	echo "Associative array in Ascending order by values<br>";
+
+	print_r($name);
+
+	echo "<br><br>";
+
+	
+
+	ksort($name);
+
+	echo "Associative array in Ascending order by keys<br>";
+
+	print_r($name);
+
+	echo "<br><br>";
+
+	
+
+	arsort($name);
+
+	echo "Associative array in desending order by values<br>";
+
+	print_r($name);
+
+	echo("<br><br>");
+
+	
+
+	krsort($name);
+
+	echo "Associative array in desending order by key<br>";
+
+	print_r($name);
+
+?>
 
 Quesrion:2A
 
