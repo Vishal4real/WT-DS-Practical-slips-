@@ -1,0 +1,65 @@
+Q1.
+-------------------------------HTML-------------------------------
+<html>
+<title>table</title>
+<head></head>
+<body>
+<table border=1>
+<caption>List of Books</caption>
+<tr>
+<th align=center rowspan=2>Item No.</th>
+<th align=center rowspan=2>Item Name</th>
+<th align=center colspan=2>Price</th>
+</tr>
+<th aligne=center>Rs.</th>
+<th aligne=center>Paise</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Programming in Python</td>
+<td>500</td>
+<td>50</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Programming in Java</td>
+<td>345</td>
+<td>00</td>
+</tr>
+</table>
+</body>
+</html>
+
+Q2.
+A).
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+data=np.random.randint(100, size=(50))
+data1=np.random.randint(100, size=(50))
+plt.hist(data,bins=5,color='gray',edgecolor='white')
+plt.show()
+plt.scatter(data,data1, marker='*',)
+plt.show()
+plt.boxplot(data,vert=False)
+plt.show()
+plt.plot(data,'-.')
+plt.show()
+plt.plot(data1)
+plt.show()
+
+B).
+import pandas as pd
+data = pd.read_csv("data.csv")
+print("Shape of the data:")
+print(data.shape)
+rows = len(data.axes[0])
+cols = len(data.axes[1]) 
+print("Number of Rows: ", rows)
+print("Number of Columns: ", cols)
+print("\nData Type:")
+print(type(data))
+print("\nDescription of data:")
+print(data.describe())
+
+

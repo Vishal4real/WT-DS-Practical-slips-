@@ -1,0 +1,92 @@
+Q1.
+------------------------------HTML------------------------------
+<html>
+<body>
+<form allign=left action='Slip9.php' method=post>
+<pre>
+Enter 1st String:<input type='text' name='str1'><br>
+Select any separator:
+<select name=sep>
+ <option> | </option>
+ <option> @ </option>
+ <option> % </option>
+</select>
+<br>
+Enter seperator to be replaced:<input type='text' name='sep_repl'><br>
+<input type='radio' name="ch" value=1> Split the string into seperate words using the give seperator.
+<input type='radio' name="ch" value=2> Replace all the occurences of the seperator in the given string with some other seperator.
+<input type='radio' name="ch" value=3> Find the last word in the given string.
+
+<input type=submit value=Ok>   <input type=reset value=Cancel>
+</pre>
+</form>
+</body>
+</html>
+
+------------------------------PHP-------------------------------
+<?php
+	$str1=$_POST['str1'];
+	$str2=$_POST['sep'];
+	$str3=$_POST['sep_repl'];
+	$ch=$_POST['ch'];
+
+	echo "Entered string is $str1<br>";
+	echo "Chosen charachter=$str2.<br>";
+	echo "Seperated for replace=$str3.<br>";
+
+	switch($ch)
+	{
+		case 1:
+		  $str_arr= explode ($str2, $str1);
+		  print_r($str_arr);
+
+		
+			break;
+		case 2:
+			
+
+			$str4=str_replace($str2,$str3,$str1);
+			    printf("\nAfter replacing string::");
+			    echo $str4;
+			break;
+		case 3:
+		    $str5=strchr($str1,' ');
+		    echo "\n Last word from the given string ".$str5;
+		     break;
+	}
+?>
+
+Q2.
+A).
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+data=np.random.randint(100, size=(50))
+plt.hist(data)
+plt.show()
+plt.scatter(data,data)
+plt.show()
+plt.boxplot(data)
+plt.show()
+plt.plot(data,data)
+plt.show()
+
+B).
+import pandas as pd
+import matplotlib.pyplot as plt
+subject=['Maths','Science','History','Geography','Physics','Chemistry']
+marks=[50,90,80,78,57,89]
+plt.pie(marks,labels=subject)
+plt.show()
+
+C).
+import pandas as pd
+data=pd.read_csv('winequality-red.csv')
+print('Describing the dataset: ')
+print(data.describe())
+print('\nShape of the dataset: ')
+print(data.shape)
+print('\nDisplay first 3 rows from dataset: ')
+print(data.head(3))
+
+			

@@ -1,0 +1,130 @@
+Q1.
+-----------------------------------HTML-----------------------------------
+frame------------------
+<html>
+<head>
+<title>HTML Frames</title>
+</head>
+<frameset rows="10%,100%,25%" frameborder="1" border="1">
+<frame name=top src=top.html>
+<frameset cols="50%,50%" frameborder="1" border="1">
+<frame name=menu src=menu.html>
+<frame name=content src=content.html>
+</frameset>
+<frame name=bottom src=bottom.html>
+</frameset>
+</html>
+
+top---------------------
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top of the Frame</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="p-3 mb-2 bg-primary text-white">
+        <h1>Pratibha College of Commerce and Computer Studies</h1> 
+    </div>
+
+</body>
+</html>
+
+menu---------------------
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu of the Frame</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<style>
+    body {
+        background-color: green; 
+    }
+</style>
+</head>
+<body> 
+    <h2 style="color: white">About Us</h2>     
+</body>
+</html>
+
+content-------------------
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>content of the Frame</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="p-3 mb-2 bg-warning text-dark">
+    <p>
+        <h3>Pratibha Group of Institutes of Kamala Education Society started Pratibha College Of Commerece & Computer Studies in 2007 with only 30 students and two programmes.Now it comprises Senior College, Pratibha Junior college, YCMOU & Pratibha Skill Development Center having 11 programmes & 4000+ students strength of Sr & Jr wing & 125+ faculties.
+
+        Dr. Deepak Shah, the secretary of KES is the best professional administrator & entrepreneur. He runs the college as a social service and it is his passion & mission to provide quality education to the students by providing high-class Infrastructure of classes, Libraries, Laboratories, Gymnasium and clean campus.
+
+        PCCCS is well known college in PCMC area for arranging Job Fair, Corporate Week, Soft Skill Development courses etc. which open number of opportunities to the students for creating job awareness and placement. The Results of PCCCS are outstanding.
+
+         The students participate actively in Co-curricular and Extra-curricular activities for their Personality Developement. The Assessment and accreditation of NAAC in 2015, with Grade A & CGPA 3.22, is a proof in itself of the quality and excellence in higher education.
+        </h3>    
+    </p>
+    </div>
+</body>
+</html>
+
+bottom--------------------
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bottom of the Frame</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="p-3 mb-2 bg-danger text-white">
+        <h2>Address</h2>
+        <p>
+            Chinchwad Station Rd, Kalbhor Nagar, MIDC, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019
+        </p>
+    </div>
+
+</body>
+</html>
+
+Q2.
+A.)
+import pandas as pd
+data = pd.read_csv('data.csv')
+print(data)
+data['Age'] = data['Age'].fillna(data['Age'].mean())
+data['Salary'] = data['Salary'].fillna(data['Salary'].mean())
+print(data)
+
+B.)
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+name=['Akansha','Shreya','Saniya','Ruhi']
+salary=[20000,23000,56000,45000]
+plt.plot(name,salary)
+plt.show()
+
+C).
+import pandas as pd
+import numpy as np
+df=pd.read_csv('SOCR-HeightWeight.csv')
+print('Top 10 Rows: ')
+print(df.head(10))
+print('\nBottom 10 Rows: ')
+print(df.tail(10))
+print('\nRandom 20 Rows: ')
+print(df.sample(20))

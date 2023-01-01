@@ -1,0 +1,81 @@
+Question:1
+
+
+<html>
+<head>
+<metaname="viewport"content="width=device-width,initial-scale=1.0">
+<title>InputForm</title>
+<metahttp-equiv="Content-Type"content="text/html;charset=UTF-8">
+</head>
+<body>
+<h2>Entermarksofstudent</h2>
+<formaction="grade.php"method="POST">Maths:
+<inputtype="number"name="maths"><br>English:
+<inputtype="number"name="english">
+<br>Marathi:
+<inputtype="number"name="marathi">
+<br>Hindi:
+<inputtype="number"name="hindi">
+<br>History:
+<inputtype="number"name="history">
+<inputtype="hidden"name="form_submitted"value="1"/>
+<inputtype="submit"value="Submit">
+</form>
+<?php
+if($_SERVER['REQUEST_METHOD']==='POST'){
+$maths=$_POST["maths"];
+$english=$_POST["english"];
+$marathi=$_POST["marathi"];
+$hindi=$_POST["hindi"];
+$history=$_POST["history"];
+$total=$marathi+$english+$marathi+$hindi+$history;
+$percent=$total/5;
+functiongetgrade($percent){
+if($percent<40)
+return"F";
+elseif($percent<60)
+return"B";
+elseif($percent<75)
+return"A";
+else
+return"O";
+}
+$grade=getgrade($percent);
+echo('<tableborder="1">
+<tr>
+<throwspan="1">Total</th>
+<throwspan="1">Percent</th>
+<throwspan="1">Grade</th>
+</tr>');
+echo("<tr>
+<td>$total</td>
+<td>$percent</td>
+<td>$grade</td>
+</tr>");
+echo("</table>");
+}
+?>
+</body>
+</html>
+
+
+
+Question:2A
+
+import numpy as np
+import matplotlib.pyplot as plt
+Marks = [58, 80, 89, 75, 90, 86]
+print("Pie Chart\n")
+Subject = ['English', 'Marathi', 'Hindi', 'History', 'Mathematics ',
+'Statistics ']
+plt.pie(Marks, labels = Subject)
+plt.show()
+plt.bar(Subject,Marks)
+plt.xlabel("Subjects")
+plt.ylabel("Mark's")
+plt.show()
+
+
+
+Question:2B
+

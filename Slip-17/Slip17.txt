@@ -1,0 +1,32 @@
+Question:1
+
+
+Quesrion:2A
+
+import pandas as pd
+import matplotlib.pyplot as plt
+iris = pd.read_csv("Iris (1).csv")
+iris.plot(kind ="scatter", x ='SepalLengthCm', y ='SepalWidthCm')
+plt.xlabel("Sepal Length")
+plt.ylabel("Sepal Width")
+plt.show()
+iris.plot(kind ="scatter", x ='PetalLengthCm', y ='PetalWidthCm')
+plt.xlabel("Petal Length")
+plt.ylabel("Petal Width")
+plt.show()
+
+Question:2B
+
+import pandas as pd
+df = pd.DataFrame(columns = ['Name','Age','Salary','Department'])
+df.loc[1] = ['AAAA',25 ,25000,'X']
+df.loc[2] = ['BBBB'23,30000,'Y']
+df.loc[3] = ['CCCC',24,30000,'W']
+df.loc[4] = ['DDDD',25,22000,'U']
+df.loc[5] = ['EEEE',22,35000,'V']
+df.loc[6] = ['FFFF',26,23000,'S']
+df.loc[7] = ['GGGG',27,20000,'M']
+df.loc[8] = ['HHHH',28,18000,'N']
+df.loc[9] = ['IIII',30,20000,'L']
+df.loc[10] = ['JJJJ',29,32000,'Z']
+print(df)

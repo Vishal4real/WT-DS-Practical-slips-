@@ -1,0 +1,46 @@
+Q1.
+-------------------------------HTML-------------------------------
+<html>
+<head>
+<body bgcolor=pink>
+
+<h1 style=color:blue;text-align:center;>PUNE CITY</h1>
+
+<marquee direction=left style=color:brown;font=size:70;><h2>Oxford of the East</h2></marquee>
+
+<h3 style=color:red;font-size:30;font:Arial;>Shivaji Nagar</h3>
+<h3 style=color:green;font-size:40;font:times;>Deccan</h3>
+<h3 style=color:purpul;font-size:60;font:arial;>Tulshi Baug</h3>
+<center> <img src="./Shaniwaarwada_Pune.jpg" width=450 height=200> </center>
+</body>
+</head>
+</html>
+
+Q2.
+A.)
+import pandas as pd
+data = pd.read_csv('data.csv')
+print(data)
+data['Age'] = data['Age'].fillna(data['Age'].mean())
+data['Salary'] = data['Salary'].fillna(data['Salary'].mean())
+print(data)
+
+B.)
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+name=['Akansha','Shreya','Saniya','Ruhi']
+salary=[20000,23000,56000,45000]
+plt.plot(name,salary)
+plt.show()
+
+C).
+import pandas as pd
+import numpy as np
+df=pd.read_csv('SOCR-HeightWeight.csv')
+print('Top 10 Rows: ')
+print(df.head(10))
+print('\nBottom 10 Rows: ')
+print(df.tail(10))
+print('\nRandom 20 Rows: ')
+print(df.sample(20))

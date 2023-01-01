@@ -1,0 +1,80 @@
+Question:1
+<html>
+	<body>
+	<form action="Slip20.php.php" method="post">
+	<h2>Enter choice :</h2>
+	<input type="radio" name="ch" value=1> Split array into chunks <br>
+	<input type="radio" name="ch" value=2> Sort array by values without changing key values <br>
+	<input type="radio" name="ch" value=3> Filter odd elements from array <br>
+	<br>
+	<input type="submit" value="SUBMIT">  
+	<input type="reset" value="CLEAR">
+	</form>
+	</body>
+</html>
+Slip20.php
+<?php                                                                                                   
+$choice=$_POST['ch'];
+
+        $arr=array('a'=>1,'b'=>2,'c'=>3,'d'=>4,'e'=>5,'f'=>6,'g'=>7,'h'=>8);
+        $arr1=array('l'=>11,'m'=>22,'n'=>33,'o'=>44,'p'=>55,'q'=>66,'r'=>77,'s'=>88);
+        $arr2=array('a'=>10,'b'=>20,'c'=>30,'d'=>40,'e'=>50,'f'=>60,'g'=>70,'h'=>80);
+        switch($choice)
+        {
+		case 1:
+			array_chunk($arr);
+				echo "Array Chunks:<br>";
+				print_r($arr);
+			break;
+		case 2:
+                        asort($arr);
+                        	echo "Array in ascending order:<br>";
+                       		print_r($arr);
+                        arsort($arr);
+                        	echo "<br>Array in descending order:<br>";
+                        	print_r($arr);
+                        break;
+               case 3:
+                        print_r(array_filter($arr,'is_odd'));
+                        break;
+                
+
+        echo "<br><a href ='Slip20.html'> RETURN</a>";
+	?>
+Question:2A
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.random.randn(50)
+y=x**2
+#y = np.random.randn(50)
+plt.plot(x,y)
+plt.title('Line chart')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+plt.title('Scatter chart')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+colors = 50*np.random.randn(50)
+plt.scatter(x,y,c=colors,marker ='*')
+plt.show()
+plt.boxplot(x, vert=False)
+plt.title('Box-plot')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+plt.hist(x, facecolor="Blue", alpha=0.5, edgecolor='b')
+plt.title('Histogram')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+
+Question:2B
+import numpy as np
+import matplotlib.pyplot as plt
+data=np.random.randint(1,100,size=50)
+temp = np.append(data, [190,180])
+plt.xlabel("x axis")
+plt.ylabel("y axis")
+plt.boxplot(temp,vert=False)
+plt.show()

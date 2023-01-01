@@ -1,0 +1,61 @@
+Q1.
+-----------------------------HTML-----------------------------
+<!DOCTYPE html>
+<html>
+<body>
+	<table width="400px" border="1px" cellspacing="0px">
+		<?php		
+		$value = 0;
+
+		for($col = 0; $col < 8; $col++) {
+			echo "<tr>";
+			$value = $col;
+
+			for($row = 0; $row < 8; $row++) {
+				if($value%2 == 0) {
+					echo
+"<td height=40px width=20px bgcolor=black></td>";
+					$value++;
+				}
+				else {
+					echo
+"<td height=40px width=20px bgcolor=white></td>";
+					$value++;
+				}
+			}
+			echo "</tr>";
+		}
+		?>
+	</table>
+</body>
+</html>
+
+Q2.
+A).
+import pandas as pd
+import matplotlib.pyplot as plt
+iris = pd.read_csv("iris.csv")
+fig = iris[iris.Species=='Iris-setosa'].plot.scatter(x='PetalLengthCm',y='PetalWidthCm',color='orange', label='Setosa')
+iris[iris.Species=='Iris-versicolor'].plot.scatter(x='PetalLengthCm',y='PetalWidthCm',color='blue', label='versicolor',ax=fig)
+iris[iris.Species=='Iris-virginica'].plot.scatter(x='PetalLengthCm',y='PetalWidthCm',color='green', label='virginica', ax=fig)
+fig.set_xlabel("Petal Length")
+fig.set_ylabel("Petal Width")
+fig.set_title(" Petal Length VS Width")
+fig=plt.gcf()
+fig.set_size_inches(12,8)
+plt.show()
+
+B).
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import scipy.stats as s
+d=np.array([[0,1],[2,3]])
+print("The Flattened Array is ==")
+print(d)
+
+print("Maximum value of the above flattened array is :")
+print(np.max(d))
+print("Minimum value of the above flattened array is : ")
+print(np.min(d))

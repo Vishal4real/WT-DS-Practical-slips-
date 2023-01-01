@@ -1,0 +1,140 @@
+Question:1
+
+
+<html>
+	<head></head>
+	<body>
+	<form method="post">
+	Enter The String:<input type="string" name="string"/><br><br>
+		<table>
+		<tr>
+			<td>Select First 5 Letters</td>
+			<td><input type="radio" name="ch" value="1"></td>
+		</tr>
+		<tr>
+			<td>Lower to Title</td>
+			<td><input type="radio" name="ch" value="2"></td>
+		</tr>
+		<tr>
+			<td>Padding</td>
+			<td><input type="radio" name="ch" value="3"></td>
+		</tr>
+		<tr>
+			<td>Leading Trim</td>
+			<td><input type="radio" name="ch" value="4"></td>
+		</tr>
+		<tr>
+			<td>Reverse</td>
+			<td><input type="radio" name="ch" value=5></td>
+		</tr>
+		</table>
+		<inputtype="submit" name="submit" value="Calculate">
+	</form>
+	<?php
+		if($_SERVER['REQUEST_METHOD']==='POST')
+		{
+			functionlowTit()
+			{
+				$str=$_POST['string'];
+				$res1=strtolower($_POST['string']);
+				$res2=ucwords(strtolower($_POST['string']));
+				echo"Thestringtolower-caseof$stris:".$res1;
+				echo"<br>";
+				echo"ThestringtoTitle-caseof$stris:".$res2;
+				echo"<br>";
+			}
+			functionpads()
+			{
+				$str=$_POST['string'];
+				$result=str_pad($str,20,"*",STR_PAD_BOTH);
+				echo"Thepaddedstringof$stris:".$result;
+				echo"<br>";
+			}
+			functionleadTrim()
+			{
+				$str=$_POST['string'];
+				$ans=rtrim($str);
+				echo"LeadingTrimmedof$stris:".$ans;
+				echo"<br>";
+			}
+			functionrever()
+			{
+				$str=$_POST['string'];
+				$ans=strrev($str);
+				echo"Reversedstringof$stris:".$ans;
+			}
+			$ch=$_POST["ch"];
+			if(isset($_POST['submit'])){
+			switch($ch)
+			{
+				case1:
+					
+					break;
+				case2:
+					lowTit();
+					break;
+				case3:
+					pads();
+					break;
+				case4:
+					leadTrim();
+					break;
+				case5:
+					rever();
+					break;
+			}
+		}
+	}
+	?>
+	</body>
+</html>
+
+
+
+
+
+
+Question:2A
+
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.random.randn(50)
+y=x**2
+#y = np.random.randn(50)
+plt.plot(x,y)
+plt.title('Line chart')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+plt.title('Scatter chart')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+colors = 50*np.random.randn(50)
+plt.scatter(x,y,c=colors,marker ='*')
+plt.show()
+plt.boxplot(x, vert=False)
+plt.title('Box-plot')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+plt.hist(x, facecolor="Blue", alpha=0.5, edgecolor='b')
+plt.title('Histogram')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+
+
+Question:2B
+
+import numpy as np
+import matplotlib.pyplot as plt
+Marks = [58, 80, 89, 75, 90, 86]
+print("Pie Chart\n")
+Subject = ['English', 'Marathi', 'Hindi', 'History', 'Mathematics','Statistics']
+plt.pie(Marks, labels = Subject)
+plt.show()
+plt.bar(Subject,Marks)
+plt.xlabel("Subject")
+plt.ylabel("Marks")
+plt.show()
+	

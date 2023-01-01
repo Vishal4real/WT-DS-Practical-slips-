@@ -1,0 +1,68 @@
+Q1.
+-----------------------------------HTML-------------------------------------
+<html>
+<head>
+<title>Accept integer</title>
+</head>
+<body>
+<form action=f.php method=post>
+Enter the First No. <input type=text name=t1><br>
+Enter the Second No.<input type=text name=t2><br>
+<input type=Submit name=b1>
+</form>
+</body>
+</html>
+
+-----------------------------------PHP--------------------------------------
+<?php
+$a=$_POST['t1'];
+$b=$_POST['t2'];
+
+mod($a,$b);
+power($a,$b);
+sum($a);
+fact($b);
+
+function mod($a,$b)
+{
+	$c=$a%$b;
+	echo "Mod of Number is: ".$c."<br>";
+}
+
+function power($a,$b)
+{
+	$d=pow($a,$b);
+	echo "Power of Number is: ".$d."<br>";
+}
+function sum($a)
+{
+	for($i=1;$i<=$a;$i++)
+	{
+		$e=$e+$i;
+	}
+	echo "Sum of first $a numbers is: ".$e."<br>";
+}
+
+function fact($b)
+{
+	$f=1;
+	for($i=$b;$i>=1;$i--)
+	{
+		$f=$f*$i;
+	}
+	echo "The factorial of Second $b numbers is: ".$f;
+
+}
+?>
+
+Q2.
+A)
+import pandas as pd
+import numpy as np
+data=pd.read_csv('SOCR-HeightWeight.csv')
+print('Column Wise Mean: ')
+print(np.mean(data))
+print('\nColumn Wise Median: ')
+print(np.median(data))
+
+B).

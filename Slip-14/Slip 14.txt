@@ -1,0 +1,52 @@
+Q1.
+-------------------------------HTML-------------------------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .column {
+                float: left;
+                width: 33.33%;
+                padding: 10px;
+                height: 90px;
+            }
+            .row::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h2>Three Equal Columns</h2></center>
+        <div class="row">
+            <div class="column" style="background-color: #aaa;">
+                <h2>Column 1</h2>
+            </div>
+            <div class="column" style="background-color: #bbb;">
+            <h2>Column 2</h2>
+            </div>
+            <div class="column" style="background-color: #ccc;">
+            <h2>Column 3</h2>
+            </div>
+            </div> 
+        </div>
+    </body>    
+
+Q2.
+A).
+import numpy as np
+a = np.arange(9).reshape((3,3))
+print("Original flattened array:")
+print(a)
+print("Weighted average along the specified axis of the above flattened array:")
+print(np.average(a, axis=1, weights=[1./4, 2./4, 2./4]))
+
+B).
+import pandas as pd
+data=pd.read_csv('Advertising.csv')
+print(data.describe())

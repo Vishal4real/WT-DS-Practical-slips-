@@ -1,0 +1,86 @@
+Q1.
+------------------------HTML------------------------
+<html>
+        <body>
+            <form action="Slip 12.php" method= "post" >
+            Enter first number :  <input type=text name=a ><br>
+            Enter second number:  <input type=text name=b ><br>
+                                                                                                                             
+        Operation:<br>
+                     <input type=radio name=c value=1>Addition.<br>
+                     <input type=radio name=c value=2>Subtraction.<br>
+                     <input type=radio name=c value=3>Multiplication.<br>
+                     <input type=radio name=c value=4>Division.<br>
+                     <input type=submit value=ok>    <input type=reset value=clear>
+        </form>
+        </body>
+
+ </html>
+------------------------PHP------------------------
+<?php
+$n1 = $_POST['a'];
+$n2 = $_POST['b'];
+$ch = $_POST['c'];
+
+        if($ch==1)
+        {
+            $c = $n1 + $n2;
+            echo"addition is: $c"; 
+        }
+        else if($ch==2)
+        {
+            $c = $n1 - $n2; 
+            echo"subtraction is: $c";
+        }
+        else if($ch==3)
+        {
+            $c = $n1 * $n2; 
+            echo"multiplication is: $c";
+        }
+        else if($ch==4)
+        {
+            $c = $n1 / $n2; 
+            echo"Division is: $c";
+        
+        }
+?>
+
+Q2.
+A).
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+data=np.random.randint(100, size=(50))
+data1=np.random.randint(100, size=(50))
+plt.hist(data,bins=5,color='gray',edgecolor='white')
+plt.show()
+plt.scatter(data,data1, marker='*',)
+plt.show()
+plt.boxplot(data,vert=False)
+plt.show()
+plt.plot(data,'-.')
+plt.show()
+plt.plot(data1)
+plt.show()
+
+B).
+
+import pandas as pd
+df=pd.DataFrame(columns=['Name', 'Salary','Department'])
+df.loc[0]=['Rahul',19000,'CS']
+df.loc[1]=['Mohan',None,'HR']
+df.loc[2]=['Sachin',21000,None]
+df.loc[3]=['Suresh',None,'Banking']
+df.loc[4]=['Ram',21000,None]
+df.loc[5]=['Ramesh',20000,'CS']
+df.loc[6]=['Piyush',18000,'Sales']
+df.loc[7]=['Ayush',21000,None]
+df.loc[8]=['Rakesh',21000,None]
+df.loc[9]=['Rohan',None,'CS']
+print(df)
+print('After Droping Duplicate Values: ')
+print(df.drop_duplicates(inplace=True))
+print('\nAfter Droping None Values: ')
+print(df.dropna())
+print('\nModified DataFrame: ')
+print(df)

@@ -1,0 +1,41 @@
+Question:1
+Question:2A
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.random.randn(50)
+y=x**2
+#y = np.random.randn(50)
+plt.plot(x,y)
+plt.title('Line chart')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+plt.title('Scatter chart')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+colors = 50*np.random.randn(50)
+plt.scatter(x,y,c=colors,marker ='*')
+plt.show()
+plt.boxplot(x, vert=False)
+plt.title('Box-plot')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+plt.hist(x, facecolor="Blue", alpha=0.5, edgecolor='b')
+plt.title('Histogram')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+
+Question:2B
+import numpy as np
+import matplotlib.pyplot as plt
+Marks = [58, 80, 89, 75, 90, 86]
+print("Pie Chart\n")
+Subject = ['English', 'Marathi', 'Hindi', 'History', 'Mathematics ',
+'Statistics ']
+plt.pie(Marks, labels = Subject)
+plt.show()
+plt.xlabel("Subjects")
+plt.ylabel("Mark's")
+plt.show()

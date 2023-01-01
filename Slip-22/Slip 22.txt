@@ -1,0 +1,97 @@
+Question:1
+<html>
+	<head>
+	</head>
+	<body>
+	<form>
+		<inputtype='radio'name='op'value='4'>Insert an element in queue.<br>
+		<inputtype='radio'name='op'value='5'>Delete an element from queue.<br>
+		<inputtype='radio'name='op'value='6'>Display the contents of queue<br>
+		<inputtype='submit'name='submit'value='submit'>
+	</form>
+	<?php
+		if($_SERVER['REQUEST_METHOD']==='POST')
+		{
+			$a=$_POST['op'];
+			$b=array(1,2,3,4,5,6,7,8,9);
+			switch($a)
+			{
+				case4:
+					print_r($b);
+					array_unshift($b,45);
+					echo"<br>";
+					echo"After insert an element in queue:<br>";
+					print_r($b);
+				break;
+				case5:
+					print_r($b);
+					array_shift($b);
+					echo"<br>";
+					echo"After delete an element in queue:<br>";
+					print_r($b);
+				break;
+				case6:
+				print_r($b);
+				break;
+			}
+		}
+	?>
+	</body>
+</html>
+
+
+Question:2
+//Import Dataset from above link.
+import pandas as pd
+import numpy as np
+from sklearn import preprocessing
+import scipy.stats as s
+print("\n Q1 Import data set on above link \n")
+d = pd.read_csv('winequality-red.csv')
+df2 = pd.DataFrame(d)
+print("\n ORIGINAL DATA VALUES")
+print("------------------------")
+print(df2)
+
+//Rescaling: Normalised the dataset using MinMaxScaler class
+import pandas as pd
+import numpy as np
+from sklearn import preprocessing
+import scipy.stats as s
+d = pd.read_csv('winequality-red.csv')
+df2 = pd.DataFrame(d)
+print("\n\n Data Scaled Between 0 to 1")
+data_scaler = preprocessing.MinMaxScaler(feature_range = (0,1))
+data_scaled = data_scaler.fit_transform(df2)
+print("\n Min Max Scaled Data ")
+print(data_scaled.round(2))
+
+//Standardizing Data (transform them into a standard Gaussian
+distribution with a mean of 0 and a standard deviation of 1)
+import pandas as pd
+import numpy as np
+from sklearn import preprocessing
+import scipy.stats as s
+d = pd.read_csv('winequality-red.csv')
+df2 = pd.DataFrame(d)
+print("\n Standardizing Data ")
+print("----------------------")
+print(" Orginal Data \n", df2)
+print("\n Initial Mean : ", s.tmean(df2).round(2))
+print(" Initial Standard Deviation : ",round(df2.std(),2))
+X_scaled = preprocessing.scale(df2)
+X_scaled.mean(axis=0)
+X_scaled.std(axis=0)
+print("\n Standardized Data \n", X_scaled.round(2))
+print("\n Scaled Mean : ",s.tmean(X_scaled).round(2))
+print(" Scaled Standard Deviation : ",round(X_scaled.std(),2))
+
+//Normalizing Data ( rescale each observation to a length of 1 (a unit
+norm). For this, use the Normalizer class.)
+import numpy as np
+from sklearn import preprocessing
+import scipy.stats as s
+d = pd.read_csv('winequality-red.csv')
+df2 = pd.DataFrame(d)
+dn = preprocessing.normalize(df2, norm = 'l1')
+print(dn.round(2))
