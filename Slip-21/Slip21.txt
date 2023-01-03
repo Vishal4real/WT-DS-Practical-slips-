@@ -1,39 +1,6 @@
 Question:1
 
-<html>
-	<head>
-		<title>High Temperatures Array</title>
-	</head>
-	<body>
-	<h2>High Temperatures for Spring Month</h2>
-	<?php
-		$highTemps=array(68,70,72,58,60,79,82,73,75,77,73,58,63,79,78);
-		$count=count($highTemps);
-		$total=0;
-		foreach($highTempsas$h)
-		{
-			$total+=$h;
-		}
-		$avg=round($total/$count);
-		echo"<p>The average high temperature for the month was $avg&deg;F.</p>\n";
-		rsort($highTemps);
-		$topTemps=array_slice($highTemps,0,5);
-		echo"<p>Thewarmestfivehightemperatureswere:<br/>\n";
-		foreach($topTempsas$t)
-		{
-			echo"$t&deg;F<br/>\n";
-		}
-		echo"</p>";
-		$lowTemps=array_slice($highTemps,-5,5);
-		echo"<p>Thecoolestfivehightemperatureswere:<br/>\n";
-		foreach($lowTempsas$l)
-		{
-			echo"$l&deg;F<br/>\n";
-		}
-		echo"</p>";
-	?>
-	</body>
-</html>
+
 
 
 Question:2A

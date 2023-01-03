@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HI</h2>
+    <form action="Q1.php" method="post">
+        String
+        <input type="text" name="str"><br>
+
+        choose separator to be replaced:<input type="text" name="sep_rc"><br>
+
+        select seprator:
+        <select name="sep">
+            <option value="#">#</option>
+            <option value="|">|</option>
+            <option value="%">%</option>
+            <option value="@">@</option>
+            <option value="!">!</option>
+            <option value=",">,</option>
+        </select><br><br>
+
+        choose opertation:<br>
+        <input type="radio" name="op" value="1">split string into separate words with given seprator<br>
+        <input type="radio" name="op" value="2">Replace all occurence of seprator in the given string with other operator<br>
+        <input type="radio" name="op" value="3">Find last word in given string<br>
+
+        <input type="submit" value="submit" name="submit">
+        <input type="reset" value="reset" name="reset">
+    </form>
+</body>
+</html>
